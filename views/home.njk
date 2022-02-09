@@ -1,9 +1,15 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-  <ul>
+  <div class="flexbox">
     {% for item in objectArray %}
-      <a href="/test/{{item.link}}"><li>{{item.title}}</li></a>
+      <div class="flexitems">
+        <h2>{{item.title}}</h2>
+        <p>{{item.desc}}</p>
+        <a href="game/{{item.link}}">learn more about it !</a>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
+
+
 {% endblock %}

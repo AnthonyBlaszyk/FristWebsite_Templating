@@ -18,7 +18,7 @@ app.get("/", (request, response) => {
   response.render("home", { objectArray });
 });
 
-app.get("/test/:gameName", (request, response) => {
+app.get("/game/:gameName", (request, response) => {
   const routeParameters = request.params;
 
   const findRoute = objectArray.find((route) => route.link === routeParameters.gameName);
